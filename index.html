@@ -22,6 +22,17 @@
 		<script src="plugin/chalkboard/plugin.js"></script>
 		<link rel="stylesheet" href="plugin/chalkboard/style.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-plugins/menu/font-awesome/css/fontawesome.css">
+    	<style>
+    	.reveal .slides {
+      	-webkit-transform: translate3d(0, 0, 0);
+     	transform: translate3d(0, 0, 0);
+   		}
+    	@media screen and (-webkit-min-device-pixel-ratio: 2) {
+      	.reveal .slides {
+      		image-rendering: -webkit-optimize-contrast;
+      		}
+    	}
+    	</style>
 	</head>
 	<body>
 		<div class="reveal">
@@ -154,7 +165,7 @@
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 		Reveal.initialize({
-		hash: true,
+		    hash: true,
         customcontrols: {
         controls: [
           { icon: '<i class="fa fa-pen-square"></i>',
@@ -168,17 +179,17 @@
         ]
         },
         chalkboard: {
-        boardmarkerWidth: 3,
+        boardmarkerWidth: 7,
         chalkWidth: 7,
         chalkEffect: 1.0,
         storage: null,
         src: null,
         readOnly: undefined,
         transition: 800,
-        theme: "chalkboard",
+        theme: "whiteboard",
         background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
         grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
-        eraser: { src: path + 'img/sponge.png', radius: 20},
+        eraser: { src: path + 'img/sponge.png', radius: 50},
         boardmarkers : [
                 { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
                 { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
@@ -199,8 +210,12 @@
         ]
         },
         // ...
-        plugins: [ RevealChalkboard, RevealCustomControls, RevealMarkdown, RevealHighlight, RevealNotes ],
+        //plugins: [ RevealChalkboard, RevealCustomControls, RevealMarkdown, RevealHighlight, RevealNotes ],
+        plugins: [ RevealHighlight, RevealNotes, RevealMarkdown, RevealChalkboard, RevealCustomControls ],
         // ...
+//        dependencies: [
+//          { src: 'plugin/handwriting/handwriting.js' },
+//        ]
 			});
 		</script>
 	</body>

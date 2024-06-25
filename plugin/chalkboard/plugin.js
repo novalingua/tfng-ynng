@@ -1765,6 +1765,7 @@ const initChalkboard = function ( Reveal ) {
 					}
 					notescanvas.style.background = 'rgba(0,0,0,0)';
 					notescanvas.style.pointerEvents = 'none';
+					//notescanvas.style.opacity = '0';
 				}
 				else {
 					// show notes canvas
@@ -1773,6 +1774,7 @@ const initChalkboard = function ( Reveal ) {
 					}
 					notescanvas.style.background = background[ 0 ]; //'rgba(255,0,0,0.5)';
 					notescanvas.style.pointerEvents = 'auto';
+					//notescanvas.style.opacity = '0.3';
 
 					var idx = 0;
 					if ( color[ mode ] ) {

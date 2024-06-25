@@ -42,7 +42,7 @@ div.boardhandle > ul > li {
 		display: none!important; 
 	}
 }
-.overlay {
+/*.overlay {
   /* ... other styles ... */
-  opacity: 0; /* Set to 70% opacity */
-}
+/*  opacity: 0; /* Set to 70% opacity */
+/*}
